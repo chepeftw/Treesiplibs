@@ -16,10 +16,6 @@ func StartTimeoutF(d float32) *time.Timer {
     return StartTimeoutUnited(d, 0)
 }
 
-func StartTimeoutStrong(d float32) *time.Timer {
-    return StartTimeoutUnited(d, 0)
-}
-
 func StartTimeoutUnited(duration float32, offset float32) *time.Timer {
     return time.NewTimer(time.Millisecond * time.Duration( offset + duration ))
 }
