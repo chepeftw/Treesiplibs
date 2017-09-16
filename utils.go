@@ -74,7 +74,10 @@ func RemoveFromList(del net.IP, list []net.IP) []net.IP {
 }
 
 func CompareIPs( a net.IP, b net.IP ) bool {
-    // return a.Equal(b)
+    if a == nil || b == nil {
+        return false
+    }
+
     return a.String() == b.String()
 }
 
